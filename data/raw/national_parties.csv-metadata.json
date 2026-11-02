@@ -1,0 +1,58 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "url": "national_parties.csv",
+  "dc:created": "2026-11-01T21:43:35.165068+00:00",
+  "dc:license": {
+    "@id": "https://opendatacommons.org/licenses/odbl/1-0"
+  },
+  "dc:creator": {
+    "@id": "https://howtheyvote.eu"
+  },
+  "dc:publisher": {
+    "@id": "https://howtheyvote.eu"
+  },
+  "tableSchema": {
+    "columns": [
+      {
+        "name": "id",
+        "datatype": "string",
+        "required": true,
+        "dc:description": "ID of the national party as listed in the EP corporate bodies list"
+      },
+      {
+        "name": "label",
+        "datatype": "string",
+        "required": true,
+        "dc:description": "The official name of the party"
+      },
+      {
+        "name": "short_label",
+        "datatype": "string",
+        "required": true,
+        "dc:description": "The short label/abbreviation of the party"
+      },
+      {
+        "name": "start_date",
+        "datatype": "string",
+        "required": true,
+        "dc:description": "When the party was founded (if founded during a term), otherwise start of the relevant term."
+      },
+      {
+        "name": "end_date",
+        "datatype": "string",
+        "required": false,
+        "dc:description": "When the party ceased to exist or the relevant term ended. Empty if ongoing."
+      },
+      {
+        "name": "country_code",
+        "datatype": "string",
+        "required": true,
+        "dc:description": "Country code from the home country of the party."
+      }
+    ]
+  },
+  "primaryKey": "id",
+  "dialect": {
+    "header": true
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "url": "groups_required_for_majority.csv",
+  "dc:created": "2026-11-01T21:43:35.271003+00:00",
+  "dc:license": {
+    "@id": "https://opendatacommons.org/licenses/odbl/1-0"
+  },
+  "dc:creator": {
+    "@id": "https://howtheyvote.eu"
+  },
+  "dc:publisher": {
+    "@id": "https://howtheyvote.eu"
+  },
+  "tableSchema": {
+    "columns": [
+      {
+        "name": "vote_id",
+        "datatype": "integer",
+        "required": true,
+        "dc:description": "Vote ID"
+      },
+      {
+        "name": "group_codes",
+        "datatype": "string",
+        "required": true,
+        "dc:description": "Political group codes, concatenated with a `+`."
+      }
+    ]
+  },
+  "primaryKey": [
+    "vote_id",
+    "group_codes"
+  ],
+  "dialect": {
+    "header": true
+  }
+}

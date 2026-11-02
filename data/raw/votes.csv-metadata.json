@@ -1,0 +1,136 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "url": "votes.csv",
+  "dc:created": "2026-11-01T21:43:35.265867+00:00",
+  "dc:license": {
+    "@id": "https://opendatacommons.org/licenses/odbl/1-0"
+  },
+  "dc:creator": {
+    "@id": "https://howtheyvote.eu"
+  },
+  "dc:publisher": {
+    "@id": "https://howtheyvote.eu"
+  },
+  "tableSchema": {
+    "columns": [
+      {
+        "name": "id",
+        "datatype": "integer",
+        "required": true,
+        "dc:description": "Vote ID"
+      },
+      {
+        "name": "timestamp",
+        "datatype": "dateTime",
+        "required": true,
+        "dc:description": "Date and time of the vote"
+      },
+      {
+        "name": "display_title",
+        "datatype": "string",
+        "required": false,
+        "dc:description": "Title that can be used to refer to the vote. In most cases, this is the title published in the roll-call vote results. If the title in the roll-call vote results is empty, this falls back to the procedure title."
+      },
+      {
+        "name": "reference",
+        "datatype": "string",
+        "required": false,
+        "dc:description": "Reference to a plenary document such as a report or a resolution"
+      },
+      {
+        "name": "description",
+        "datatype": "string",
+        "required": false,
+        "dc:description": "Description of the vote as published in the roll-call vote results"
+      },
+      {
+        "name": "amendment_subject",
+        "datatype": "string",
+        "required": false,
+        "dc:description": "Subject of the specific amendment if applicable. This field is only available for votes starting in 2024"
+      },
+      {
+        "name": "amendment_number",
+        "datatype": "string",
+        "required": false,
+        "dc:description": "Number of the specific amendment if applicable. This field is only available for votes starting in 2024"
+      },
+      {
+        "name": "is_main",
+        "datatype": "boolean",
+        "required": true,
+        "dc:description": "Whether this vote is a main vote. We classify certain votes as main votes based on the text description in the voting records published by Parliament. For example, if Parliament has voted on amendments, only the vote on the text as a whole is classified as a main vote. Certain votes such as votes on the agenda are not classified as main votes. This is not an official classification by the European Parliament and there may be false negatives."
+      },
+      {
+        "name": "procedure_reference",
+        "datatype": "string",
+        "required": false,
+        "dc:description": "Procedure reference as listed in the Legislative Observatory"
+      },
+      {
+        "name": "procedure_title",
+        "datatype": "string",
+        "required": false,
+        "dc:description": "Title of the legislative procedure as listed in the Legislative Observatory"
+      },
+      {
+        "name": "procedure_type",
+        "datatype": "string",
+        "required": false,
+        "dc:description": "Procedure type as listed in the Legislative Observatory. This is a 3-letter code such as COD, RSP, or BUD."
+      },
+      {
+        "name": "procedure_stage",
+        "datatype": "string",
+        "required": false,
+        "dc:description": "Stage of the procedure in which the vote took place. One of `OLP_FIRST_READING`, `OLP_SECOND_READING`, `OLP_THIRD_READING`.This field is only available for votes starting in 2024 and if the vote is part of an Ordinary Legislative Procedure."
+      },
+      {
+        "name": "majority_type",
+        "datatype": "string",
+        "required": false,
+        "dc:description": "Type of majority required for this vote to pass. Only available for votes starting in 2024 and held as part of one of the following procedure types: * Ordinary Legislative Procedure (COD) * Own-Initiative Procedure (INI) * Resolutions on topical subjects (RSP) The majority is also available for votes on motions of censure against the Commission. We follow the naming used in the Rules of Procedure: * `MAJORITY_OF_VOTES_CAST`: Requires more votes for than against, ignoring abstentions and   MEPs that did not vote. * `MAJORITY_OF_COMPONENT_MEMBERS`: Requires more than half of votes cast, including   abstentions and MEPs that did not vote. For the 10th legislative term, this means 361   MEPs have to vote for. * `MAJORITY_OF_COMPONENT_MEMBERS`: Requires more than half of all MEPs in Parliament to   vote in favor, including abstentions and MEPs that did not vote. For the 10th legislative   term, this means 361 MEPs have to vote in favor."
+      },
+      {
+        "name": "count_for",
+        "datatype": "integer",
+        "required": true,
+        "dc:description": "Number of MEPs who voted in favor"
+      },
+      {
+        "name": "count_against",
+        "datatype": "integer",
+        "required": true,
+        "dc:description": "Number of MEPs who voted against"
+      },
+      {
+        "name": "count_abstention",
+        "datatype": "integer",
+        "required": true,
+        "dc:description": "Number of MEPs who abstained"
+      },
+      {
+        "name": "count_did_not_vote",
+        "datatype": "integer",
+        "required": true,
+        "dc:description": "Number of MEPs who didn\u2019t participate in the vote"
+      },
+      {
+        "name": "result",
+        "datatype": "string",
+        "required": false,
+        "dc:description": "Vote result. One of `ADOPTED`, `REJECTED`, `LAPSED`. This field is only available for votes starting in 2024."
+      },
+      {
+        "name": "texts_adopted_reference",
+        "datatype": "string",
+        "required": false,
+        "dc:description": "\"EP reference number of the text as it was adopted. This includes all amendments that were adopted to an original text."
+      }
+    ]
+  },
+  "primaryKey": "id",
+  "dialect": {
+    "header": true
+  }
+}

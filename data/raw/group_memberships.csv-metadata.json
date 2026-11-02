@@ -1,0 +1,57 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "url": "group_memberships.csv",
+  "dc:created": "2026-11-01T21:43:35.165695+00:00",
+  "dc:license": {
+    "@id": "https://opendatacommons.org/licenses/odbl/1-0"
+  },
+  "dc:creator": {
+    "@id": "https://howtheyvote.eu"
+  },
+  "dc:publisher": {
+    "@id": "https://howtheyvote.eu"
+  },
+  "tableSchema": {
+    "columns": [
+      {
+        "name": "member_id",
+        "datatype": "integer",
+        "required": true,
+        "dc:description": "Member ID"
+      },
+      {
+        "name": "group_code",
+        "datatype": "string",
+        "required": true,
+        "dc:description": "Group code"
+      },
+      {
+        "name": "term",
+        "datatype": "integer",
+        "required": true,
+        "dc:description": "Parliamentary term"
+      },
+      {
+        "name": "start_date",
+        "datatype": "date",
+        "required": true,
+        "dc:description": "Start date"
+      },
+      {
+        "name": "end_date",
+        "datatype": "date",
+        "required": false,
+        "dc:description": "End date. If empty, the MEP the membership is still active."
+      }
+    ]
+  },
+  "primaryKey": [
+    "member_id",
+    "group_code",
+    "start_date",
+    "end_date"
+  ],
+  "dialect": {
+    "header": true
+  }
+}

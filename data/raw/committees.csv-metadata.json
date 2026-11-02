@@ -1,0 +1,42 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "url": "committees.csv",
+  "dc:created": "2026-11-01T21:47:31.646311+00:00",
+  "dc:license": {
+    "@id": "https://opendatacommons.org/licenses/odbl/1-0"
+  },
+  "dc:creator": {
+    "@id": "https://howtheyvote.eu"
+  },
+  "dc:publisher": {
+    "@id": "https://howtheyvote.eu"
+  },
+  "tableSchema": {
+    "columns": [
+      {
+        "name": "code",
+        "datatype": "string",
+        "required": true,
+        "dc:description": "Unique identifier of the committee"
+      },
+      {
+        "name": "label",
+        "datatype": "string",
+        "required": true,
+        "dc:description": "Label"
+      },
+      {
+        "name": "abbreviation",
+        "datatype": "string",
+        "required": true,
+        "dc:description": "Abbreviation"
+      }
+    ]
+  },
+  "primaryKey": [
+    "code"
+  ],
+  "dialect": {
+    "header": true
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "url": "amendment_urls.csv",
+  "dc:created": "2026-11-01T21:43:35.267353+00:00",
+  "dc:license": {
+    "@id": "https://opendatacommons.org/licenses/odbl/1-0"
+  },
+  "dc:creator": {
+    "@id": "https://howtheyvote.eu"
+  },
+  "dc:publisher": {
+    "@id": "https://howtheyvote.eu"
+  },
+  "tableSchema": {
+    "columns": [
+      {
+        "name": "vote_id",
+        "datatype": "integer",
+        "required": true,
+        "dc:description": "Vote ID"
+      },
+      {
+        "name": "amendment_number",
+        "datatype": "integer",
+        "required": true,
+        "dc:description": "Amendment number."
+      },
+      {
+        "name": "url",
+        "datatype": "string",
+        "required": true,
+        "dc:description": "Links to PDF documents containing the text of the amendments. The linked documents may contain multiple amendments, not just the amendments the vote was about. This field is only available for votes starting in 2024."
+      }
+    ]
+  },
+  "primaryKey": [
+    "vote_id",
+    "amendment_number"
+  ],
+  "dialect": {
+    "header": true
+  }
+}

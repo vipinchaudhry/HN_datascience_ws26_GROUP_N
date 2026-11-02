@@ -1,0 +1,42 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "url": "geo_areas.csv",
+  "dc:created": "2026-11-01T21:47:31.372589+00:00",
+  "dc:license": {
+    "@id": "https://opendatacommons.org/licenses/odbl/1-0"
+  },
+  "dc:creator": {
+    "@id": "https://howtheyvote.eu"
+  },
+  "dc:publisher": {
+    "@id": "https://howtheyvote.eu"
+  },
+  "tableSchema": {
+    "columns": [
+      {
+        "name": "code",
+        "datatype": "string",
+        "required": true,
+        "dc:description": "ISO 3166-1 alpha-3 code if available, otherwise a custom 3-letter code"
+      },
+      {
+        "name": "label",
+        "datatype": "string",
+        "required": true,
+        "dc:description": "Label"
+      },
+      {
+        "name": "iso_alpha_2",
+        "datatype": "string",
+        "required": false,
+        "dc:description": "ISO 3166-1 alpha-2 code if available"
+      }
+    ]
+  },
+  "primaryKey": [
+    "code"
+  ],
+  "dialect": {
+    "header": true
+  }
+}

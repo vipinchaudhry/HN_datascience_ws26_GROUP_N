@@ -218,3 +218,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Raw data (too large for GitHub; see README for download instructions)
+data/raw/**/*.csv
+
+# Web / story
+node_modules/

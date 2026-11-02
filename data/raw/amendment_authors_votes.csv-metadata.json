@@ -1,0 +1,51 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "url": "amendment_authors_votes.csv",
+  "dc:created": "2026-11-01T21:43:35.270477+00:00",
+  "dc:license": {
+    "@id": "https://opendatacommons.org/licenses/odbl/1-0"
+  },
+  "dc:creator": {
+    "@id": "https://howtheyvote.eu"
+  },
+  "dc:publisher": {
+    "@id": "https://howtheyvote.eu"
+  },
+  "tableSchema": {
+    "columns": [
+      {
+        "name": "vote_id",
+        "datatype": "integer",
+        "required": true,
+        "dc:description": "Vote ID"
+      },
+      {
+        "name": "author_type",
+        "datatype": "string",
+        "required": true,
+        "dc:description": "Either `GROUP`, `COMMITTEE`, `MEMBERS`, `ORALLY`, `ORIGINAL_TEXT`, or `RAPPORTEUR`"
+      },
+      {
+        "name": "group_code",
+        "datatype": "string",
+        "required": true,
+        "dc:description": "Group code, if applicable."
+      },
+      {
+        "name": "committee_code",
+        "datatype": "string",
+        "required": true,
+        "dc:description": "Committee code, if applicable."
+      }
+    ]
+  },
+  "primaryKey": [
+    "vote_id",
+    "author_type",
+    "group_code",
+    "committee_code"
+  ],
+  "dialect": {
+    "header": true
+  }
+}

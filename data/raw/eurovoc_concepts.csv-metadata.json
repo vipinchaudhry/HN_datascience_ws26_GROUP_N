@@ -1,0 +1,36 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "url": "eurovoc_concepts.csv",
+  "dc:created": "2026-11-01T21:47:30.675438+00:00",
+  "dc:license": {
+    "@id": "https://opendatacommons.org/licenses/odbl/1-0"
+  },
+  "dc:creator": {
+    "@id": "https://howtheyvote.eu"
+  },
+  "dc:publisher": {
+    "@id": "https://howtheyvote.eu"
+  },
+  "tableSchema": {
+    "columns": [
+      {
+        "name": "id",
+        "datatype": "string",
+        "required": true,
+        "dc:description": "EuroVoc concept ID"
+      },
+      {
+        "name": "label",
+        "datatype": "string",
+        "required": true,
+        "dc:description": "Label"
+      }
+    ]
+  },
+  "primaryKey": [
+    "id"
+  ],
+  "dialect": {
+    "header": true
+  }
+}

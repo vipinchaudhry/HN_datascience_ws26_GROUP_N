@@ -1,0 +1,73 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "url": "member_votes.csv",
+  "dc:created": "2026-11-01T21:43:35.267919+00:00",
+  "dc:license": {
+    "@id": "https://opendatacommons.org/licenses/odbl/1-0"
+  },
+  "dc:creator": {
+    "@id": "https://howtheyvote.eu"
+  },
+  "dc:publisher": {
+    "@id": "https://howtheyvote.eu"
+  },
+  "tableSchema": {
+    "columns": [
+      {
+        "name": "vote_id",
+        "datatype": "integer",
+        "required": true,
+        "dc:description": "Vote ID"
+      },
+      {
+        "name": "member_id",
+        "datatype": "integer",
+        "required": true,
+        "dc:description": "Member ID"
+      },
+      {
+        "name": "position",
+        "datatype": "string",
+        "required": true,
+        "dc:description": "Vote position. One of `FOR`, `AGAINST`, `ABSTENTION` if the MEP participated in the vote or `DID_NOT_VOTE` if the MEP wasn\u2019t present for the vote. We currently do not differentiate between MEPs who did not vote with or without an excuse."
+      },
+      {
+        "name": "country_code",
+        "datatype": "string",
+        "required": true,
+        "dc:description": "Country code"
+      },
+      {
+        "name": "group_code",
+        "datatype": "string",
+        "required": false,
+        "dc:description": "Group code. This references the political group that the MEP was part of on the day of the vote. This is not necessarily the MEP\u2019s current political group."
+      },
+      {
+        "name": "group_short_label",
+        "datatype": "string",
+        "required": false,
+        "dc:description": "Short label of the political group that the MEP was part of on the day of the vote. This is not necessarily the MEP\u2019s current political group."
+      },
+      {
+        "name": "national_party_id",
+        "datatype": "string",
+        "required": false,
+        "dc:description": "National party ID. This references the national party that the MEP was part of on the day of the vote. This is not necessarily the MEP\u2019s current national party."
+      },
+      {
+        "name": "national_party_short_label",
+        "datatype": "string",
+        "required": false,
+        "dc:description": "Short label of the national party that the MEP was part of on the day of the vote. This is not necessarily the MEP's current national party."
+      }
+    ]
+  },
+  "primaryKey": [
+    "member_id",
+    "vote_id"
+  ],
+  "dialect": {
+    "header": true
+  }
+}

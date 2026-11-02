@@ -1,0 +1,49 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "url": "national_party_memberships.csv",
+  "dc:created": "2026-11-01T21:43:35.166246+00:00",
+  "dc:license": {
+    "@id": "https://opendatacommons.org/licenses/odbl/1-0"
+  },
+  "dc:creator": {
+    "@id": "https://howtheyvote.eu"
+  },
+  "dc:publisher": {
+    "@id": "https://howtheyvote.eu"
+  },
+  "tableSchema": {
+    "columns": [
+      {
+        "name": "member_id",
+        "datatype": "integer",
+        "required": true,
+        "dc:description": "Member ID"
+      },
+      {
+        "name": "national_party_id",
+        "datatype": "string",
+        "required": true,
+        "dc:description": "National Party ID"
+      },
+      {
+        "name": "start_date",
+        "datatype": "date",
+        "required": true,
+        "dc:description": "Start of the membership. Either when an MEP became a member of the party or start of the term."
+      },
+      {
+        "name": "end_date",
+        "datatype": "date",
+        "required": false,
+        "dc:description": "End of the membership if MEP left or term ended. Empty as long as membership is active."
+      }
+    ]
+  },
+  "primaryKey": [
+    "member_id",
+    "party_id"
+  ],
+  "dialect": {
+    "header": true
+  }
+}

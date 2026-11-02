@@ -1,0 +1,40 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "url": "countries.csv",
+  "dc:created": "2026-11-01T21:43:35.164026+00:00",
+  "dc:license": {
+    "@id": "https://opendatacommons.org/licenses/odbl/1-0"
+  },
+  "dc:creator": {
+    "@id": "https://howtheyvote.eu"
+  },
+  "dc:publisher": {
+    "@id": "https://howtheyvote.eu"
+  },
+  "tableSchema": {
+    "columns": [
+      {
+        "name": "code",
+        "datatype": "string",
+        "required": true,
+        "dc:description": "3-letter ISO-3166-1 code"
+      },
+      {
+        "name": "iso_alpha_2",
+        "datatype": "string",
+        "required": true,
+        "dc:description": "2-letter ISO-3166-1 code"
+      },
+      {
+        "name": "label",
+        "datatype": "string",
+        "required": true,
+        "dc:description": "Label as published by the Publications Office of the European Union"
+      }
+    ]
+  },
+  "primaryKey": "code",
+  "dialect": {
+    "header": true
+  }
+}

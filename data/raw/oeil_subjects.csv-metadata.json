@@ -1,0 +1,36 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "url": "oeil_subjects.csv",
+  "dc:created": "2026-11-01T21:47:31.079145+00:00",
+  "dc:license": {
+    "@id": "https://opendatacommons.org/licenses/odbl/1-0"
+  },
+  "dc:creator": {
+    "@id": "https://howtheyvote.eu"
+  },
+  "dc:publisher": {
+    "@id": "https://howtheyvote.eu"
+  },
+  "tableSchema": {
+    "columns": [
+      {
+        "name": "code",
+        "datatype": "string",
+        "required": true,
+        "dc:description": "Code"
+      },
+      {
+        "name": "label",
+        "datatype": "string",
+        "required": true,
+        "dc:description": "Label"
+      }
+    ]
+  },
+  "primaryKey": [
+    "code"
+  ],
+  "dialect": {
+    "header": true
+  }
+}

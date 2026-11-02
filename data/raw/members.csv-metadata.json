@@ -1,0 +1,70 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "url": "members.csv",
+  "dc:created": "2026-11-01T21:43:35.163203+00:00",
+  "dc:license": {
+    "@id": "https://opendatacommons.org/licenses/odbl/1-0"
+  },
+  "dc:creator": {
+    "@id": "https://howtheyvote.eu"
+  },
+  "dc:publisher": {
+    "@id": "https://howtheyvote.eu"
+  },
+  "tableSchema": {
+    "columns": [
+      {
+        "name": "id",
+        "datatype": "integer",
+        "required": true,
+        "dc:description": "Member ID as used by the [MEP Directory](https://www.europarl.europa.eu/meps/en/home)."
+      },
+      {
+        "name": "first_name",
+        "datatype": "string",
+        "required": true,
+        "dc:description": "First name"
+      },
+      {
+        "name": "last_name",
+        "datatype": "string",
+        "required": true,
+        "dc:description": "Last name"
+      },
+      {
+        "name": "country_code",
+        "datatype": "string",
+        "required": true,
+        "dc:description": "3-letter ISO-3166-1 code"
+      },
+      {
+        "name": "date_of_birth",
+        "datatype": "date",
+        "required": false,
+        "dc:description": "Date of birth"
+      },
+      {
+        "name": "email",
+        "datatype": "string",
+        "required": false,
+        "dc:description": "Email address"
+      },
+      {
+        "name": "facebook",
+        "datatype": "string",
+        "required": false,
+        "dc:description": "Facebook profile URL"
+      },
+      {
+        "name": "twitter",
+        "datatype": "string",
+        "required": false,
+        "dc:description": "Twitter account URL"
+      }
+    ]
+  },
+  "primaryKey": "id",
+  "dialect": {
+    "header": true
+  }
+}
